@@ -36,7 +36,7 @@ const App = () =>
        <g transform={`translate(${centerX}, ${centerY}) rotate(9)`}>
         <circle
           r={centerY - strokeWidth / 2}
-          fill="pink"
+          fill="#F7C1B4"
           stroke="black"
           stroke-width={strokeWidth}
         />
@@ -45,7 +45,7 @@ const App = () =>
           cx={-eyeOffsetX}
           cy={-eyeOffsetY}
           r={eyeRadius}
-          // fill="black"
+          fill="black"
           // stroke="black"
           // stroke-width="8"
         />
