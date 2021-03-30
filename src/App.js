@@ -16,7 +16,6 @@ const mouthWidth = 15;
 const mouthRadius = 130;
 // Method chaining - set multiple chain
 
-
 const noseArc = arc()
     .innerRadius(0)
     .outerRadius(40)
@@ -28,18 +27,22 @@ const mouthArc = arc()
     .outerRadius(mouthRadius + mouthWidth)
     .startAngle(Math.PI /2)
     .endAngle(Math.PI * 3/2);
+
+    const BackgroundCircle = ({radius}) => (
+      <circle
+          r={radius}
+          fill="#F7C1B4"
+          stroke="black"
+          stroke-width={strokeWidth}
+        />
+    )
   
 const App = () => 
  (
     <div>
       <svg width={width} height={height}>
        <g transform={`translate(${centerX}, ${centerY}) rotate(9)`}>
-        <circle
-          r={centerY - strokeWidth / 2}
-          fill="#F7C1B4"
-          stroke="black"
-          stroke-width={strokeWidth}
-        />
+        <BackgroundCircle radius={centerY - strokeWidth/2} />
 
         <circle
           cx={-eyeOffsetX}
