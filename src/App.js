@@ -8,8 +8,8 @@ console.log(arc);
 
 
 
-const width = 920;
-const height = 460;
+const width = 200;
+const height = 200;
 
 // Method chaining - set multiple chain
 
@@ -24,18 +24,32 @@ const noseArc = arc()
 
 
 const App = () => (
+  <>
   <Face 
 width = {width}
 height = {height}
  centerX ={width / 2}
  centerY = {height / 2}
-strokeWidth = {15}
+strokeWidth = {10}
+eyeOffsetX = {30}
+eyeOffsetY = {30}
+eyeRadius = {10}
+mouthWidth = {5}
+ mouthRadius = {40}
+ />
+  <Face 
+width = {width}
+height = {height}
+ centerX ={width / 2}
+ centerY = {height / 2}
+strokeWidth = {5}
 eyeOffsetX = {90}
 eyeOffsetY = {110}
 eyeRadius = {25}
 mouthWidth = {15}
  mouthRadius = {130}
  />
+ </>
 );
 
 export default App;

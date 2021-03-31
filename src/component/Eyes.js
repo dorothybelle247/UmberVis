@@ -16,7 +16,7 @@ export const Eyes = ({eyeOffsetX, eyeOffsetY, eyeRadius}) => (
       cy={-eyeOffsetY}
       r={eyeRadius}
       fill="black"
-      // stroke="black"
+      stroke="black"
       // stroke-width="8"
     />
   </div>
