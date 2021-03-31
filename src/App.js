@@ -1,11 +1,14 @@
 import React from "react";
 import "./style.css";
 import { arc } from "d3";
+import {Face} from "./component/Face"
+import {FaceContainer} from "./component/FaceContainer"
 import { BackgroundCircle } from "./component/BackgroundCircle";
 import {Eyes} from "./component/Eyes"
 import {Mouth} from "./component/Mouth"
 
 console.log(arc);
+
 
 const width = 920;
 const height = 460;
@@ -27,12 +30,12 @@ const noseArc = arc()
   .endAngle(Math.PI / 2);
 */}
 
-
-
-const App = () => (
-  <div>
-    <svg width={width} height={height}>
-     <g transform={`translate(${centerX}, ${centerY})`}>
+const Face = () => (
+  <FaceContainer 
+  width={width}
+  height={height}
+  centerX={centerX}
+  centerY={centerY}>
     <BackgroundCircle 
     radius={centerY - strokeWidth / 2}
     strokeWidth={strokeWidth}
@@ -48,9 +51,11 @@ const App = () => (
     />
     {/* <path d={noseArc()} /> */}
       
-      </g>
-    </svg>
-  </div>
+  </FaceContainer>
+)
+
+const App = () => (
+  <Face />
 );
 
 export default App;
